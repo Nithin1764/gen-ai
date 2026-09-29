@@ -1,0 +1,36 @@
+GCC + PaaS WEB APPLICATION — OUTPUT
+====================================
+
+GCC compilation:
+  gcc (Debian 14.2.0-19) 14.2.0
+
+Compilation command:
+  gcc -std=c11 -O2 -Wall -Wextra server.c -o server
+
+Compilation result:
+  SUCCESS — ELF 64-bit executable created.
+
+Local server command:
+  PORT=10000 ./server
+
+Local HTTP test:
+  GET http://127.0.0.1:10000/
+  HTTP/1.1 200 OK
+  Content-Type: text/html; charset=UTF-8
+
+Page output:
+  Hello from GCC + PaaS
+  Deployment successful
+  This web application is written in C, compiled with GCC,
+  packaged with Docker, and designed to run as a Render Web Service.
+
+PaaS deployment configuration:
+  Platform: Render
+  Service type: Web Service
+  Runtime: Docker
+  Port: 10000 (via PORT environment variable)
+  Public URL after deployment: https://<service-name>.onrender.com
+
+IMPORTANT:
+  The public URL can only be created after the Render account is connected
+  and the service is deployed.
