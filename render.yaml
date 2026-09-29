@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: gcc-paas-webapp
+    runtime: docker
+    plan: free
